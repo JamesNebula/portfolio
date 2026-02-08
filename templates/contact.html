@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Contact - James Cawthray{% endblock %}
+{% block page_title %}Contact{% endblock %}
+
+{% block content %}
+<p class="contact-intro mb-4" style="font-size: 1.1rem; line-height: 1.7; color: var(--muted);">
+    I'm always excited to connect with fellow developers and potential collaborators.
+</p>
+
+<div class="contact-form-container bg-white p-4 rounded-3 shadow-sm">
+    <form class="contact-form" method="POST" action="{{ url_for('contact') }}">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="name" class="form-label" style="font-size: 0.875rem; font-weight: 600; color: var(--text);">Your Name</label>
+                    <input type="text" id="name" name="name" class="form-control" required style="font-size: 0.95rem; padding: 0.75rem 1rem; border-color: var(--border);">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="email" class="form-label" style="font-size: 0.875rem; font-weight: 600; color: var(--text);">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-control" required style="font-size: 0.95rem; padding: 0.75rem 1rem; border-color: var(--border);">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group mt-3">
+            <label for="subject" class="form-label" style="font-size: 0.875rem; font-weight: 600; color: var(--text);">Subject</label>
+            <input type="text" id="subject" name="subject" class="form-control" required style="font-size: 0.95rem; padding: 0.75rem 1rem; border-color: var(--border);">
+        </div>
+
+        <div class="form-group mt-3">
+            <label for="message" class="form-label" style="font-size: 0.875rem; font-weight: 600; color: var(--text);">Message</label>
+            <textarea id="message" name="message" class="form-control" rows="6" required style="font-size: 0.95rem; padding: 0.75rem 1rem; border-color: var(--border); resize: vertical;"></textarea>
+        </div>
+
+        <button type="submit" class="btn w-100 mt-4" style="padding: 0.85rem; font-weight: 600; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); border: none; font-size: 1rem; color: white; border-radius: 8px;">
+            Send Message
+        </button>
+    </form>
+</div>
+
+<style>
+.contact-form-container {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contact-form-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.15);
+}
+
+@media (max-width: 768px) {
+    .contact-intro {
+        font-size: 1rem;
+    }
+    
+    .contact-form-container {
+        padding: 1.5rem;
+    }
+}
+</style>
+{% endblock %}

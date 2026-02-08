@@ -1,0 +1,292 @@
+{% extends "base.html" %}
+
+{% block title %}Confluencer Forex App{% endblock %}
+{% block page_title %}Confluencer{% endblock %}
+
+{% block content %}
+<!-- Hero Section with Live Status -->
+<div class="project-hero mb-5 p-4 bg-light rounded-3">
+    <div class="row g-4 align-items-center">
+        <div class="col-md-8">
+            <div class="d-flex align-items-center mb-3">
+                <div style="font-size: 3.5rem; margin-right: 20px;">💱</div>
+                <div>
+                    <h1 class="h5 fw-bold mb-0" style="font-size: 2.5rem">Forex Confluence Analyzer</h1>
+                </div>
+            </div>
+            <p class="lead mb-0" style="font-size: 1.15rem; color: var(--text);">
+                Professional trading analysis platform combining technical indicators with machine learning predictions. 
+            </p>
+        </div>
+        <div class="col-md-4 text-md-end">
+            <a href="https://confluencer-r0t7.onrender.com" target="_blank" 
+               class="btn btn-success fw-bold px-4 py-3 mb-2 w-100 w-md-auto"
+               style="border-radius: 8px; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);">
+                <i class="fas fa-bolt me-2"></i>Launch Live App
+            </a>
+            <div class="mt-2">
+                <span class="badge bg-success"><i class="fas fa-check-circle me-1"></i>Deployed</span>
+                <span class="badge bg-primary ms-1"><i class="fas fa-users me-1"></i> Actively Used</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Overview Section -->
+<div class="project-section mb-5">
+    <h2 class="h4 mb-3 fw-bold" style="color: var(--primary);">Project Overview</h2>
+    <p class="lead mb-3" style="font-size: 1.1rem; color: var(--text);">
+        A full-stack Flask application that helps forex traders make data-driven decisions by combining multi-timeframe technical analysis with machine learning predictions.
+    </p>
+    <p class="mb-0" style="font-size: 0.95rem; line-height: 1.7; color: var(--muted);">
+        Confluencer is <strong>live</strong> and I use it regularly. It assists in: reducing emotional trading, quantifying confluence across timeframes, and providing objective probability forecasts. The app features secure user authentication, persistent trade tracking, and model retraining capabilities.
+    </p>
+</div>
+
+<!-- Features Grid -->
+<div class="project-section mb-5">
+    <h2 class="h4 mb-4 fw-bold" style="color: var(--primary);">Core Features</h2>
+    
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="feature-card bg-white p-4 rounded-3 shadow-sm h-100 border-start border-3 border-primary">
+                <div class="d-flex align-items-start mb-3">
+                    <div class="feature-icon me-3 mt-1" style="font-size: 1.8rem; color: var(--primary);">🎯</div>
+                    <h3 class="h5 fw-bold mb-0">Confluence Scoring System</h3>
+                </div>
+                <p class="mb-3 text-muted" style="font-size: 0.95rem; line-height: 1.6;">
+                    Weighted analysis combining 5 key factors:
+                </p>
+                <ul class="mb-0" style="padding-left: 1.25rem; font-size: 0.9rem;">
+                    <li class="mb-1"><strong>30%</strong> Timeframe alignment (M5 to D1)</li>
+                    <li class="mb-1"><strong>25%</strong> Pattern confirmation (candlestick patterns)</li>
+                    <li class="mb-1"><strong>20%</strong> Support/Resistance proximity</li>
+                    <li class="mb-1"><strong>15%</strong> EMA alignment (9, 21, 50, 200)</li>
+                    <li><strong>10%</strong> Volume confirmation</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="feature-card bg-white p-4 rounded-3 shadow-sm h-100 border-start border-3 border-success">
+                <div class="d-flex align-items-start mb-3">
+                    <div class="feature-icon me-3 mt-1" style="font-size: 1.8rem; color: #10b981;">🤖</div>
+                    <h3 class="h5 fw-bold mb-0">ML-Powered Predictions</h3>
+                </div>
+                <p class="mb-3 text-muted" style="font-size: 0.95rem; line-height: 1.6;">
+                    Random Forest Classifier trained on 14 technical indicators:
+                </p>
+                <ul class="mb-0" style="padding-left: 1.25rem; font-size: 0.9rem;">
+                    <li class="mb-1">Real-time data from Alpha Vantage API</li>
+                    <li class="mb-1">Daily/Weekly trend probability forecasts</li>
+                    <li class="mb-1">Feature importance visualization</li>
+                    <li>Model persistence (auto-saves after training)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="feature-card bg-white p-4 rounded-3 shadow-sm h-100 border-start border-3 border-info">
+                <div class="d-flex align-items-start mb-3">
+                    <div class="feature-icon me-3 mt-1" style="font-size: 1.8rem; color: #3b82f6;">📊</div>
+                    <h3 class="h5 fw-bold mb-0">Trade Tracking & Analytics</h3>
+                </div>
+                <p class="mb-3 text-muted" style="font-size: 0.95rem; line-height: 1.6;">
+                    Complete performance monitoring:
+                </p>
+                <ul class="mb-0" style="padding-left: 1.25rem; font-size: 0.9rem;">
+                    <li class="mb-1">P/L calculation with pip/value conversion</li>
+                    <li class="mb-1">Win rate, profit factor, avg win/loss metrics</li>
+                    <li class="mb-1">Trade history with pagination</li>
+                    <li>Exportable trade journals</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="feature-card bg-white p-4 rounded-3 shadow-sm h-100 border-start border-3 border-warning">
+                <div class="d-flex align-items-start mb-3">
+                    <div class="feature-icon me-3 mt-1" style="font-size: 1.8rem; color: #f59e0b;">🔒</div>
+                    <h3 class="h5 fw-bold mb-0">Secure Authentication</h3>
+                </div>
+                <p class="mb-3 text-muted" style="font-size: 0.95rem; line-height: 1.6;">
+                    Production-grade security:
+                </p>
+                <ul class="mb-0" style="padding-left: 1.25rem; font-size: 0.9rem;">
+                    <li class="mb-1">Password hashing with bcrypt</li>
+                    <li class="mb-1">CSRF protection on all forms</li>
+                    <li class="mb-1">Session management (Flask-Login)</li>
+                    <li>User-specific data isolation</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tech Stack Section -->
+<div class="project-section mb-5">
+    <h2 class="h4 mb-4 fw-bold" style="color: var(--primary);">Tech Stack</h2>
+    
+    <div class="bg-light p-4 rounded-3">
+        <div class="row g-4">
+            <div class="col-md-3">
+                <h4 class="h6 fw-bold mb-3 text-primary">Backend</h4>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-primary">Flask 3.0</span>
+                    <span class="badge bg-primary">Flask-SQLAlchemy</span>
+                    <span class="badge bg-primary">Flask-Login</span>
+                    <span class="badge bg-primary">Flask-WTF</span>
+                    <span class="badge bg-primary">Flask-Migrate</span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h4 class="h6 fw-bold mb-3 text-success">Data & ML</h4>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-success">Alpha Vantage API</span>
+                    <span class="badge bg-success">pandas</span>
+                    <span class="badge bg-success">scikit-learn</span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h4 class="h6 fw-bold mb-3 text-info">Database</h4>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-info text-dark">SQLite (Dev)</span>
+                    <span class="badge bg-info text-dark">PostgreSQL (Prod)</span>
+                    <span class="badge bg-info text-dark">Alembic Migrations</span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h4 class="h6 fw-bold mb-3 text-warning">Frontend</h4>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-warning text-dark">Bootstrap 5</span>
+                    <span class="badge bg-warning text-dark">Jinja2</span>
+                    <span class="badge bg-warning text-dark">Chart.js</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Why This Stands Out Section -->
+<div class="project-section mb-5">
+    <h2 class="h4 mb-4 fw-bold" style="color: var(--primary);">Features</h2>
+    
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+                <div class="d-flex align-items-start mb-3">
+                    <div class="me-3 mt-1" style="color: var(--primary); font-size: 1.5rem;">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div>
+                        <h3 class="h6 fw-bold mb-2">Production-Ready Architecture</h3>
+                        <p class="mb-0 text-muted" style="font-size: 0.95rem; line-height: 1.6;">
+                            Features proper database migrations, environment configuration, error handling, and security practices.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+                <div class="d-flex align-items-start mb-3">
+                    <div class="me-3 mt-1" style="color: var(--primary); font-size: 1.5rem;">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div>
+                        <h3 class="h6 fw-bold mb-2">Practical ML Integration</h3>
+                        <p class="mb-0 text-muted" style="font-size: 0.95rem; line-height: 1.6;">
+                            Utilised ML to solve a real trading problem <strong>(probability forecasting)</strong>. Includes model persistence, retraining capability, and interpretable feature importance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+                <div class="d-flex align-items-start mb-3">
+                    <div class="me-3 mt-1" style="color: var(--primary); font-size: 1.5rem;">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div>
+                        <h3 class="h6 fw-bold mb-2">Security-First Approach</h3>
+                        <p class="mb-0 text-muted" style="font-size: 0.95rem; line-height: 1.6;">
+                            Implements <strong>bcrypt password hashing, CSRF protection, and session management</strong> 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+                <div class="d-flex align-items-start mb-3">
+                    <div class="me-3 mt-1" style="color: var(--primary); font-size: 1.5rem;">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div>
+                        <h3 class="h6 fw-bold mb-2">API Integration</h3>
+                        <p class="mb-0 text-muted" style="font-size: 0.95rem; line-height: 1.6;">
+                            Integrates with <strong>Alpha Vantage's live forex API</strong> 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Call to Action Section -->
+<div class="project-section mb-5">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 bg-gradient rounded-3 text-white"
+         style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+        <div class="mb-3 mb-md-0 text-center text-md-start">
+            <h3 class="h5 fw-bold mb-1">Experience Confluencer Live</h3>
+            <p class="mb-0 opacity-90" style="font-size: 0.95rem;">
+                See the app in action with real forex data and analysis tools
+            </p>
+        </div>
+        <div class="d-flex flex-column flex-md-row gap-3 w-100 w-md-auto">
+            <a href="https://confluencer-r0t7.onrender.com" target="_blank" 
+               class="btn btn-light fw-bold px-4 py-2 flex-grow-1"
+               style="border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                <i class="fas fa-bolt me-2"></i>See Live App
+            </a>
+            <a href="https://github.com/JamesNebula/confluencer" target="_blank" 
+               class="btn btn-outline-light fw-bold px-4 py-2 flex-grow-1"
+               style="border-radius: 8px;">
+                <i class="fab fa-github me-2"></i>View Source Code
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+.project-hero {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+    border: 1px solid var(--border);
+}
+
+.feature-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.bg-gradient {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+@media (max-width: 768px) {
+    .project-hero .row > div {
+        margin-bottom: 1rem;
+    }
+    
+    .btn-block {
+        width: 100% !important;
+    }
+}
+</style>
+{% endblock %}

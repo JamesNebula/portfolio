@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+
+{% block title %}Projects - James Cawthray{% endblock %}
+{% block page_title %}Projects{% endblock %}
+
+{% block content %}
+
+<!-- Project 1: Whian Whian Rainforest (with 3D visualization tile) -->
+<div class="col-12">
+    <div class="project-card bg-white rounded-3 shadow-sm overflow-hidden">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <div class="project-image-container" style="height: 180px; overflow: hidden; position: relative;">
+                    <img src="{{ url_for('static', filename='projects/whian_whian/topdown_view.png') }}" 
+                         alt="Whian Whian Rainforest 3D Canopy Visualization" 
+                         class="project-tile-image"
+                         style="width: 100%; height: 100%; object-fit: contain; display: block;">
+                    <div class="project-image-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 10px; color: white; font-size: 0.85rem; font-weight: 500;">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="project-info p-3">
+                    <h2 class="project-title h5 mb-1" style="color: var(--primary); font-weight: 600;">Whian Whian Rainforest Canopy Analysis</h2>
+                    <p class="project-meta mb-2" style="font-size: 0.8rem; color: var(--muted);">
+                        <span class="date">January 2026</span> • 
+                        <span class="category">LiDAR Processing | Spatial Analysis</span>
+                    </p>
+                    <p class="project-description mb-2" style="font-size: 0.875rem; line-height: 1.6; color: var(--muted);">
+                        I worked with a 6.2 million-point LiDAR dataset from Whian Whian rainforest in NSW. My goal was exploratory — to understand the forest structure through visualization and basic spatial analysis
+                    </p>
+                    <div class="project-tags mb-2">
+                        <span class="tag badge bg-light text-primary me-1 mb-1" style="font-size: 0.7rem; padding: 0.35rem 0.65rem; font-weight: 600;">Python</span>
+                        <span class="tag badge bg-light text-primary me-1 mb-1" style="font-size: 0.7rem; padding: 0.35rem 0.65rem; font-weight: 600;">LiDAR</span>
+                        <span class="tag badge bg-light text-primary me-1 mb-1" style="font-size: 0.7rem; padding: 0.35rem 0.65rem; font-weight: 600;">laspy</span>
+                        <span class="tag badge bg-light text-primary me-1 mb-1" style="font-size: 0.7rem; padding: 0.35rem 0.65rem; font-weight: 600;">rasterio</span>
+                    </div>
+                    <a href="{{ url_for('whian_whian_project') }}" class="project-link" style="font-size: 0.875rem; color: var(--primary); text-decoration: none; font-weight: 600;">View Project →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Project 2: Confluencer Forex App -->
+<div class="col-12">
+    <div class="project-card bg-white rounded-3 shadow-sm overflow-hidden">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <div class="project-image-container" style="height: 180px; overflow: hidden; position: relative;">
+                    <div class="text-center mb-5">
+                        <img src="{{ url_for('static', filename='projects/confluencer/app_screenshot.png') }}" 
+                            alt="Confluencer App Interface" 
+                            class="img-fluid rounded-3 shadow-lg"
+                            style="width: 100%; height: 100%; object-fit: contain; display: block;">
+                            <div class="project-image-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 10px; color: white; font-size: 0.85rem; font-weight: 500;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="project-info p-3">
+                    <h2 class="project-title h5 mb-1" style="color: var(--primary); font-weight: 600;">Confluencer - Forex Confluence Analyzer</h2>
+                    <p class="project-meta mb-2" style="font-size: 0.8rem; color: var(--muted);">
+                        <span class="date">December 2025</span> • 
+                        <span class="category">Flask Web App | Machine Learning</span>
+                    </p>
+                    <p class="project-description mb-2" style="font-size: 0.875rem; line-height: 1.6; color: var(--muted);">
+                        Professional forex analysis platform combining technical indicators with ML predictions. Features confluence scoring, real-time Alpha Vantage data, trade tracking, and user authentication. Deployed and actively used.
+                    </p>
+                    <div class="project-tags mb-2">
+                        <span class="tag badge bg-light text-primary me-1 mb-1" style="font-size: 0.7rem; padding: 0.35rem 0.65rem; font-weight: 600;">Flask</span>
+                        <span class="tag badge bg-light text-primary me-1 mb-1" style="font-size: 0.7rem; padding: 0.35rem 0.65rem; font-weight: 600;">scikit-learn</span>
+                        <span class="tag badge bg-light text-primary me-1 mb-1" style="font-size: 0.7rem; padding: 0.35rem 0.65rem; font-weight: 600;">Alpha Vantage</span>
+                        <span class="tag badge bg-light text-primary me-1 mb-1" style="font-size: 0.7rem; padding: 0.35rem 0.65rem; font-weight: 600;">Bootstrap 5</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <a href="{{ url_for('confluencer_project') }}" class="project-link" style="font-size: 0.875rem; color: var(--primary); text-decoration: none; font-weight: 600;">View Project →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Project 3 -->
+    <div class="col-12">
+        <div class="project-card bg-white rounded-3 shadow-sm">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <div class="project-image-container" style="height: 180px; overflow: hidden; position: relative;">
+                    <div class="text-center mb-5">
+                        <img src="{{ url_for('static', filename='projects/flight_path/flight_path_screenshot.png') }}" 
+                            alt="Flight Path App Interface" 
+                            class="img-fluid rounded-3 shadow-lg"
+                            style="width: 100%; height: 100%; object-fit: contain; display: block;">
+                            <div class="project-image-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 10px; color: white; font-size: 0.85rem; font-weight: 500;"></div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="project-info p-3">
+                        <h2 class="project-title h5 mb-1" style="color: var(--primary); font-weight: 600;">Flight Path Calculator</h2>
+                        <p class="project-meta mb-2" style="font-size: 0.8rem; color: var(--muted);">
+                            <span class="date">March 2025</span> • 
+                            <span class="category">Web Development</span>
+                        </p>
+                        <p class="project-description mb-2" style="font-size: 0.875rem; line-height: 1.6; color: var(--muted);">
+                            A professional-grade tool for calculating great-circle distances, bearings, and flight times between global airports using the Haversine formula.
+                        </p>
+                        <div class="project-tags mb-2">
+                            <span class="tag badge bg-light text-primary me-1 mb-1" style="font-size: 0.7rem; padding: 0.35rem 0.65rem; font-weight: 600;">Flask</span>
+                            <span class="tag badge bg-light text-primary me-1 mb-1" style="font-size: 0.7rem; padding: 0.35rem 0.65rem; font-weight: 600;">Streamlit</span>
+                        </div>
+                        <a href="https://flightcalculator.streamlit.app/" target="_blank" class="project-link" style="font-size: 0.875rem; color: var(--primary); text-decoration: none; font-weight: 600;">View Project →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.project-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid var(--border);
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-color: rgba(37, 99, 235, 0.2);
+}
+
+.project-card:hover .project-link {
+    color: var(--primary-dark);
+}
+
+@media (max-width: 768px) {
+    .project-image {
+        height: 140px !important;
+    }
+}
+</style>
+{% endblock %}

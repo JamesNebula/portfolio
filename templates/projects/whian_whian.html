@@ -1,0 +1,252 @@
+{% extends "base.html" %}
+
+{% block title %}Whian Whian Rainforest Analysis - James Cawthray{% endblock %}
+{% block page_title %}Whian Whian Rainforest Point Cloud Exploration{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="project-hero mb-5 p-4 bg-light rounded-3">
+    <div class="row g-4">
+        <div class="col-md-3 text-center">
+            <div class="metric-card p-3 bg-white rounded-2 shadow-sm">
+                <div class="metric-value h2 fw-bold text-primary">6.2M</div>
+                <div class="metric-label">Points</div>
+                <div class="metric-detail text-muted small">LiDAR point cloud</div>
+            </div>
+        </div>
+        <div class="col-md-3 text-center">
+            <div class="metric-card p-3 bg-white rounded-2 shadow-sm">
+                <div class="metric-value h2 fw-bold text-success">400ha</div>
+                <div class="metric-label">Area</div>
+                <div class="metric-detail text-muted small">Rainforest coverage</div>
+            </div>
+        </div>
+        <div class="col-md-3 text-center">
+            <div class="metric-card p-3 bg-white rounded-2 shadow-sm">
+                <div class="metric-value h2 fw-bold text-info">37.1m</div>
+                <div class="metric-label">Mean Height</div>
+                <div class="metric-detail text-muted small">Elevation above sea level</div>
+            </div>
+        </div>
+        <div class="col-md-3 text-center">
+            <div class="metric-card p-3 bg-white rounded-2 shadow-sm">
+                <div class="metric-value h2 fw-bold text-warning">50m</div>
+                <div class="metric-label">Grid Size</div>
+                <div class="metric-detail text-muted small">Analysis resolution</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Project Overview -->
+<div class="project-section mb-5">
+    <h2 class="h4 mb-3 fw-bold" style="color: var(--primary);">🌿 Project Overview</h2>
+    <p class="lead mb-3" style="font-size: 1.1rem; color: var(--text);">
+        Exploratory analysis of Whian Whian State Conservation Area LiDAR data using Python and open-source geospatial libraries.
+    </p>
+    <p class="mb-0" style="font-size: 0.95rem; line-height: 1.7; color: var(--muted);">
+        In this project I worked with an airborne spatial dataset (6.2 million points) to create visualizations and basic spatial analysis. I focused on understanding the data through 3D visualization and simple grid-based statistics.
+    </p>
+</div>
+
+<!-- Visualizations -->
+<div class="project-section mb-5">
+    <h2 class="h4 mb-4 fw-bold" style="color: var(--primary);">📊 Visualizations</h2>
+    
+    <div class="row g-4 mb-4">
+        <div class="col-md-8">
+            <div class="visualization-card bg-white rounded-3 shadow-sm overflow-hidden">
+                <img src="{{ url_for('static', filename='projects/whian_whian/canopy_3d.png') }}" 
+                     alt="3D Point Cloud Visualization" 
+                     class="img-fluid w-100">
+                <div class="p-3">
+                    <h3 class="h6 fw-bold mb-1">3D Point Cloud</h3>
+                    <p class="mb-0 text-muted small">
+                        Interactive 3D scatter plot showing all points colored by elevation. 
+                        Clearly reveals the multi-layered canopy structure and terrain undulations.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="visualization-card bg-white rounded-3 shadow-sm overflow-hidden mb-4">
+                <img src="{{ url_for('static', filename='projects/whian_whian/height_histogram.png') }}" 
+                     alt="Height Distribution" 
+                     class="img-fluid w-100">
+                <div class="p-3">
+                    <h3 class="h6 fw-bold mb-1">Height Distribution</h3>
+                    <p class="mb-0 text-muted small">
+                        Histogram showing elevation distribution across all 6.2 million points.
+                    </p>
+                </div>
+            </div>
+            <div class="visualization-card bg-white rounded-3 shadow-sm overflow-hidden">
+                <img src="{{ url_for('static', filename='projects/whian_whian/tall_zones.png') }}" 
+                     alt="Tall Canopy Zones" 
+                     class="img-fluid w-100">
+                <div class="p-3">
+                    <h3 class="h6 fw-bold mb-1">Tall Canopy Zones</h3>
+                    <p class="mb-0 text-muted small">
+                        Grid cells with heights in top 10% highlighted in red (34.5 hectares).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Methodology -->
+<div class="project-section mb-5">
+    <h2 class="h4 mb-4 fw-bold" style="color: var(--primary);">🔬 Methodology</h2>
+    
+    <div class="row g-4">
+        <div class="col-md-6">
+            <h3 class="h6 fw-bold mb-2 text-primary">Data Exploration</h3>
+            <p class="mb-0" style="font-size: 0.9rem; line-height: 1.7;">
+                Loaded the LAZ file using laspy and calculated basic statistics: 
+                point count, elevation range, mean height. Created a summary report 
+                to understand the dataset characteristics.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <h3 class="h6 fw-bold mb-2 text-primary">3D Visualization</h3>
+            <p class="mb-0" style="font-size: 0.9rem; line-height: 1.7;">
+                Sampled 100,000 points for performance and created an interactive 
+                3D scatter plot using matplotlib. Colored points by elevation to 
+                reveal forest structure and terrain features.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <h3 class="h6 fw-bold mb-2 text-primary mt-4">Grid Analysis</h3>
+            <p class="mb-0" style="font-size: 0.9rem; line-height: 1.7;">
+                Divided the 400-hectare area into 50m × 50m grid cells. Calculated 
+                mean elevation for each cell and created a heatmap. Identified 
+                cells in the top 10% of heights as "tall canopy zones".
+            </p>
+        </div>
+        <div class="col-md-6">
+            <h3 class="h6 fw-bold mb-2 text-primary mt-4">Tools Used</h3>
+            <p class="mb-0" style="font-size: 0.9rem; line-height: 1.7;">
+                <strong>laspy</strong> for reading LAZ files<br>
+                <strong>numpy</strong> for numerical operations<br>
+                <strong>matplotlib</strong> for visualizations<br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- What I Learned -->
+<div class="project-section mb-5">
+    <h2 class="h4 mb-4 fw-bold" style="color: var(--primary);">📚 Concepts</h2>
+    
+    <div class="bg-light p-4 rounded-3">
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="d-flex align-items-start">
+                    <span class="h2 fw-bold text-primary me-3">1</span>
+                    <div>
+                        <h4 class="h6 fw-bold mb-1">Spatial Data Handling</h4>
+                        <p class="mb-0 text-muted small">
+                            Loaded, sampled, and visualized a large point cloud dataset.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex align-items-start">
+                    <span class="h2 fw-bold text-primary me-3">2</span>
+                    <div>
+                        <h4 class="h6 fw-bold mb-1">3D Visualization</h4>
+                        <p class="mb-0 text-muted small">
+                            Created professional 3D scatter plots that reveal spatial patterns.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex align-items-start">
+                    <span class="h2 fw-bold text-primary me-3">3</span>
+                    <div>
+                        <h4 class="h6 fw-bold mb-1">Grid-Based Analysis</h4>
+                        <p class="mb-0 text-muted small">
+                            Applied simple spatial statistics using grid cells and heatmaps.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Call to Action -->
+<div class="project-section mb-5">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 bg-gradient rounded-3 text-white"
+         style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="mb-3 mb-md-0 text-center text-md-start">
+            <h3 class="h5 fw-bold mb-1">View Complete Project</h3>
+            <p class="mb-0 opacity-90" style="font-size: 0.95rem;">
+                Full code, outputs, and documentation on GitHub
+            </p>
+        </div>
+        <a href="https://github.com/yourusername/whian-whian-analysis" 
+           target="_blank" 
+           class="btn btn-light fw-bold px-4 py-2">
+            <i class="fab fa-github me-2"></i>View on GitHub
+        </a>
+    </div>
+</div>
+
+<style>
+.project-hero {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+    border: 1px solid var(--border);
+}
+
+.metric-card {
+    transition: transform 0.3s;
+}
+
+.metric-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.metric-value {
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
+.metric-label {
+    font-weight: 600;
+    color: var(--dark);
+    font-size: 0.95rem;
+}
+
+.metric-detail {
+    font-size: 0.85rem;
+}
+
+.visualization-card {
+    transition: transform 0.3s;
+}
+
+.visualization-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-section h2 {
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border);
+}
+
+.bg-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+@media (max-width: 768px) {
+    .metric-value {
+        font-size: 1.8rem;
+    }
+}
+</style>
+{% endblock %}

@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block title %}About - James Cawthray{% endblock %}
+{% block page_title %}About{% endblock %}
+
+{% block content %}
+<div class="about-content">
+    <section class="mb-4">
+        <h2 class="h5 mb-2" style="color: var(--primary); font-weight: 600;">My Journey</h2>
+        <p class="mb-2" style="font-size: 0.9rem; line-height: 1.7; color: var(--muted);">
+            I have spent the majority of my downtime over the last 3 years, learning how to build web applications. In the process I have built a strong foundation in problem solving and writing clean scalable code. I genuinely enjoy programming, and find satisfaction in utilising my time in the pursuit of solutions. Out of sheer curiosity and personal interest, I have recently pivoted toward Data Science to broaden my skillset. I find the ability to use technology to answer questions about the world is extremely rewarding.
+        </p>
+        <p class="mb-0" style="font-size: 0.9rem; line-height: 1.7; color: var(--muted);">
+            My end goal has always been to become an AI professional and to work in the field of computer vision. Over the past year, I've been deeply immersed in working with and understanding spatial data. 
+        </p>
+    </section>
+
+    <section class="mb-4">
+        <h2 class="h5 mb-2" style="color: var(--primary); font-weight: 600;">What I Do</h2>
+        <p class="mb-1" style="font-size: 0.9rem; line-height: 1.7; color: var(--muted);">
+            <strong style="color: var(--text);">Data Processing:</strong> Most of my time recently is spent processing and analyzing LiDAR point cloud data, making sense of raw LAZ files using Python libraries like laspy, numpy, and PyVista.
+        </p>
+        <p class="mb-1" style="font-size: 0.9rem; line-height: 1.7; color: var(--muted);">
+            <strong style="color: var(--text);">Software Development:</strong> I mostly build with Python, Flask, and Streamlit to create clean, functional web applications and APIs.
+        </p>
+        <p class="mb-0" style="font-size: 0.9rem; line-height: 1.7; color: var(--muted);">
+            <strong style="color: var(--text);">AI & Machine Learning:</strong> Currently exploring AI engineering, with a keen interest in computer vision and pattern recognition.
+        </p>
+    </section>
+
+    <section class="mb-4">
+        <h2 class="h5 mb-3" style="color: var(--primary); font-weight: 600;">Tech Stack</h2>
+        <div class="row g-2">
+            <div class="col-md-6 col-lg-3">
+                <div class="skill-category bg-light p-2 rounded-2">
+                    <h3 class="h6 mb-2" style="color: var(--primary); font-weight: 600;">Programming</h3>
+                    <ul class="skill-list list-unstyled mb-0" style="font-size: 0.85rem;">
+                        <li class="mb-1">• Python (Primary)</li>
+                        <li class="mb-1">• JavaScript (Minimal)</li>
+                        <li class="mb-0">• SQL</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="skill-category bg-light p-2 rounded-2">
+                    <h3 class="h6 mb-2" style="color: var(--primary); font-weight: 600;">Web Frameworks</h3>
+                    <ul class="skill-list list-unstyled mb-0" style="font-size: 0.85rem;">
+                        <li class="mb-1">• Flask</li>
+                        <li class="mb-1">• FastAPI</li>
+                        <li class="mb-0">• Streamlit</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="skill-category bg-light p-2 rounded-2">
+                    <h3 class="h6 mb-2" style="color: var(--primary); font-weight: 600;">Data Science</h3>
+                    <ul class="skill-list list-unstyled mb-0" style="font-size: 0.85rem;">
+                        <li class="mb-1">• NumPy</li>
+                        <li class="mb-1">• Pandas</li>
+                        <li class="mb-0">• Scikit-learn</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="skill-category bg-light p-2 rounded-2">
+                    <h3 class="h6 mb-2" style="color: var(--primary); font-weight: 600;">GIS & Spatial</h3>
+                    <ul class="skill-list list-unstyled mb-0" style="font-size: 0.85rem;">
+                        <li class="mb-1">• laspy</li>
+                        <li class="mb-1">• PyVista</li>
+                        <li class="mb-1">• rasterio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="h5 mb-2" style="color: var(--primary); font-weight: 600;">Career Goals</h2>
+        <p class="mb-2" style="font-size: 0.9rem; line-height: 1.7; color: var(--muted);">
+            I'm currently seeking opportunities as a Software Engineer, where I can apply my Python skills to build innovative and functional solutions. I'm particularly interested in roles that involve:
+        </p>
+        <ul class="goals-list list-unstyled" style="font-size: 0.9rem; color: var(--muted);">
+            <li class="mb-1">→ Team Collaboration</li>
+            <li class="mb-1">→ Data Processing</li>
+            <li class="mb-1">→ Building developer tools and APIs</li>
+            <li class="mb-0">→ Working with environmental and geospatial data</li>
+        </ul>
+    </section>
+</div>
+
+<style>
+.about-content {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        font-size: 0.875rem;
+    }
+    
+    h2.h5 {
+        font-size: 1.125rem;
+    }
+}
+</style>
+{% endblock %}
